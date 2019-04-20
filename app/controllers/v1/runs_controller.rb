@@ -1,6 +1,6 @@
 class V1::RunsController < ApplicationController
   def index
-    render json: Run.all
+    render json: Run.all.order('created_at DESC')
   end
 
   def show
